@@ -25,17 +25,20 @@ class Stack:
 stack = Stack()
 
 st = input()
+em = 0
 
 for i in st:
     if i == '(':
         stack.push(i)
     elif i == ')':
         if stack.isEmpty():
-            print('No')
+            em = 1
             break
         stack.pop()
 
-if stack.isEmpty():
+if em != 1 and stack.isEmpty():
     print('Yes')
+elif em == 1:
+    print('No')
 else:
     print('No')
