@@ -85,7 +85,8 @@ for i in range(m):
             it = it.next
     elif order[0] == 'D':
         # 가리키는 위치 ⬆️의 바로 뒤에 있는 빵을 제거
-        l.erase(it)
+        if it.next != None:
+            l.erase(it)
     elif order[0] == 'P':
         # 가리키는 위치 ⬆️에 &라는 문자가 적혀있는 식빵을 추가합니다.
         l.insert(it, order[1])
