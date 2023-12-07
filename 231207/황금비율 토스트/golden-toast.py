@@ -81,12 +81,14 @@ for i in range(m):
             it = it.prev
     elif order[0] == 'R':
         # 가리키는 위치 ⬆️를 바로 뒤에 있는 빵을 건너뛴 위치로 변경
-        if it != l.end():
+        if it.next != None:
             it = it.next
     elif order[0] == 'D':
         # 가리키는 위치 ⬆️의 바로 뒤에 있는 빵을 제거
+        # 만약, 이미 빵들의 맨 뒤라면 무시
         if it.next != None:
-            l.erase(it)
+            it = l.erase(it)
+            
     elif order[0] == 'P':
         # 가리키는 위치 ⬆️에 &라는 문자가 적혀있는 식빵을 추가합니다.
         l.insert(it, order[1])
