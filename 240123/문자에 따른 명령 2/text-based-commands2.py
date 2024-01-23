@@ -12,7 +12,7 @@ for i in order:
     elif i == 'R':
         dir_num = (dir_num + 1) % 4
     elif i == 'F':
-        nx = x + dx[dir_num]
-        ny = y + dy[dir_num]
+        x += dx[dir_num]
+        y += dy[dir_num]
 
-print(nx, ny)
+print(x, y)
