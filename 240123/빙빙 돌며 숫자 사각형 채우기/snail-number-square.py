@@ -5,13 +5,12 @@ answer = [
     for _ in range(n)
 ]
 
-
 def in_range(x, y):
-    return 0 <= x and x < n and 0 <= y and y < n
+    return 0 <= x and x < n and 0 <= y and y < m
 
 # 동, 남, 서, 북
 dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0] # 행, 열
-x, y = 0, 0           # 시작은 (0, 0) 입니다.
+x, y = 0, 0           # 시작은 (0, 0)
 dir_num = 0           # 0: 오른쪽, 1: 아래쪽, 2: 왼쪽, 3: 위쪽
 
 # 처음 시작 위치에 초기값을 적습니다.
@@ -33,6 +32,6 @@ for i in range(2, n * m + 1):
 
 # 출력
 for i in range(n):
-    for j in range(n):
+    for j in range(m):
         print(answer[i][j], end = ' ')
     print()
