@@ -11,13 +11,16 @@ def print_xor():
     
     for elem in answer:
         lst.append(int(elem))
-    
-    for i in range(len(lst)):
-        temp = lst[0]
-        xor = temp ^ lst[i]
-        temp = xor
 
-    max_num = max(max_num, xor)
+    if len(lst) == 1:  # 리스트의 길이가 1인 경우에 대한 처리
+        max_num = max(max_num, lst[0])
+    else:
+        temp = lst[0]
+        for i in range(1, len(lst)): 
+            xor = temp ^ lst[i]
+            temp = xor
+
+        max_num = max(max_num, xor)
     
     return max_num
 
