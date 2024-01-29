@@ -12,7 +12,7 @@ def print_xor():
     for elem in answer:
         lst.append(int(elem))
     
-    for i in range(1, len(lst)):
+    for i in range(len(lst)):
         temp = lst[0]
         xor = temp ^ lst[i]
         temp = xor
